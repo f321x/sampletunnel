@@ -17,7 +17,7 @@ ss = nostr.key.compute_shared_secret(prikey, pubkey)
 
 def nostr_connect():
     try:
-        filters = Filters([Filter(authors=[pubkey], kinds=[EventKind.ENCRYPTED_DIRECT_MESSAGE], limit=1)])
+        filters = Filters([Filter(authors=[pubkey], kinds=[EventKind.ENCRYPTED_DIRECT_MESSAGE], limit=0)])
         subscription_id = str(pubkey) + "dl"
         request = [ClientMessageType.REQUEST, subscription_id]
         request.extend(filters.to_json_array())
