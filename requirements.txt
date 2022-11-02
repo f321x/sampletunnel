@@ -1,0 +1,6 @@
+cffi~=1.15.1
+secp256k1~=0.14.0
+cryptography~=38.0.1
+websocket-client~=1.4.1
+pywin32
+pyhook
